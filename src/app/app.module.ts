@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookCreateComponent } from './book-create/book-create.component';
 // import { BrowserXhr } from '@angular/http';
 // import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
 const appRoutes: Routes = [
@@ -20,6 +21,11 @@ const appRoutes: Routes = [
     component: BookDetailComponent,
     data: { title: 'Book Details' }
   },
+  {
+    path: 'book-create',
+    component: BookCreateComponent,
+    data: { title: 'Create Book' }
+  },
   { path: '',
     redirectTo: '/books',
     pathMatch: 'full'
@@ -30,7 +36,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     BookComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    BookCreateComponent
   ],
   imports: [
     BrowserModule,
