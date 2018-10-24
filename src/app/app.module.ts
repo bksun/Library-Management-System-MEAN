@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { RouterModule, Routes } from '@angular/router';
+import { BookDetailComponent } from './book-detail/book-detail.component';
 // import { BrowserXhr } from '@angular/http';
 // import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
 const appRoutes: Routes = [
@@ -14,16 +15,22 @@ const appRoutes: Routes = [
     component: BookComponent,
     data: { title: 'Book List' }
   },
+  {
+    path: 'book-details/:id',
+    component: BookDetailComponent,
+    data: { title: 'Book Details' }
+  },
   { path: '',
     redirectTo: '/books',
     pathMatch: 'full'
   }
-]
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent
+    BookComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
