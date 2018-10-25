@@ -28,9 +28,13 @@ router.post('/', function(req, res, next) {
 });
 
 /* UPDATE BOOK */
-router.put('/:id', function(req, res, next) {
+router.put('/:id', function(req, res, next) 
+{
+  console.log('request body -> ' + req.body.author);
+
   Book.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
+    console.log('PUT Status -> ' + post);
     res.json(post);
   });
 });

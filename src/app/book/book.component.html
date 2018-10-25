@@ -7,7 +7,7 @@
     </a>
   </h1>
   <br> <br>
-  
+
   <table class="table">
     <thead>
       <tr>
@@ -21,6 +21,7 @@
         <td>{{ book.title }}</td>
         <td>{{ book.author }}</td>
         <td><a [routerLink]="['/book-details', book._id]">Show Details</a> </td>
+        <td><a [routerLink]="['/book-edit', book._id]" >Edit</a></td>
       </tr>
     </tbody>
   </table>

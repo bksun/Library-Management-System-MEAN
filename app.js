@@ -13,9 +13,11 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 
   
 app.use(express.static(path.join(__dirname, 'dist')));
+// CORS to allow Angular application to access APIs running on Node
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
     next();
     });
 
