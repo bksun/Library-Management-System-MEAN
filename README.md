@@ -1,9 +1,7 @@
 
 # LibraryMean5
-This Project is part of my learning MEAN Stack using below tut link:
-  https://www.djamware.com/post/5a0673c880aca7739224ee21/mean-stack-angular-5-crud-web-application-example
+This version has basic features to Create, Edit, View and Delete books.
 
-  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
 ## Development server
