@@ -29,4 +29,8 @@ export class BookCreateComponent implements OnInit {
       );
   }
 
+  cancelEdit(id){
+    this.router.navigate(['/books']);
+  }
+
 }
