@@ -13,7 +13,7 @@ export class BookDetailComponent implements OnInit {
 
   book = {};
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) { }
+  constructor( private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
     this.getBookDetail(this.route.snapshot.params['id']);

@@ -16,8 +16,13 @@
 
     <div class="row">
       <div class="col-md-12">
-        <a [routerLink]="['/book-edit', book._id]" class="btn btn-success">EDIT</a>
-      </div>
+        <a [routerLink]="['/book-edit', book._id]" class="btn btn-success">Edit</a>
+        <span>
+            &nbsp; &nbsp; 
+          <a [routerLink]="['/books']" class="btn btn-success">Book List</a>
+        </span>
+      </div> 
+      
     </div>
     
   </dl>

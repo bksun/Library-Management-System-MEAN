@@ -22,6 +22,8 @@
         <td>{{ book.author }}</td>
         <td><a [routerLink]="['/book-details', book._id]">Show Details</a> </td>
         <td><a [routerLink]="['/book-edit', book._id]" >Edit</a></td>
+        <td>  <button class="btn btn-danger" type="button" (click)="deleteBook(book._id)">DELETE</button>
+        </td>
       </tr>
     </tbody>
   </table>
