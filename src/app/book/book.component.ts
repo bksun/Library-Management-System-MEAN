@@ -21,13 +21,13 @@ export class BookComponent implements OnInit {
     });
   }
 
-
+ //this.router.navigate(['/books']);
+        
   deleteBook(id) {
     if(confirm('Are you sure to delete the selected book?')){
     this.http.delete('http://localhost:3000/book/'+id)
       .subscribe(res => {
-          //this.router.navigate(['/books']);
-        }, (err) => {
+         }, (err) => {
           console.log(err);
         }
       );

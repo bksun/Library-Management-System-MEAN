@@ -39,4 +39,8 @@ export class BookEditComponent implements OnInit {
       );
       console.log('updated book...');
     }
+
+    cancelEdit(id){
+      this.router.navigate(['/book-details', id]);
+    }
 }
