@@ -9,8 +9,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
-// import { BrowserXhr } from '@angular/http';
-// import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
+
+import { FilterPipe }from './filters/filter.pipe';
 
 const appRoutes: Routes = [
   {
@@ -46,6 +46,7 @@ const appRoutes: Routes = [
     BookDetailComponent,
     BookCreateComponent,
     BookEditComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
