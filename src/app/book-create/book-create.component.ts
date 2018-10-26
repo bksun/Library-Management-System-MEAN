@@ -18,7 +18,8 @@ export class BookCreateComponent implements OnInit {
   }
 
   saveBook() {
-
+    console.log(this.book);
+    
     this.http.post('http://localhost:3000/book', this.book)
       .subscribe(res => {
           let id = res['_id'];

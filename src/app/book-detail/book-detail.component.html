@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>{{ book.title }}</h1>
+  <h2>{{ book.title }}</h2>
   <dl class="list">
     <dt>ISBN</dt>
     <dd>&nbsp;&nbsp; {{ book.isbn }}</dd>
@@ -11,7 +11,9 @@
     <dd>&nbsp;&nbsp; {{ book.publisher }}</dd>
     <dt>Price</dt>
     <dd>&nbsp;&nbsp; {{ book.price }}</dd>
-    <dt>Update Date</dt>
+    <dt>Published Date</dt>
+    <dd>&nbsp;&nbsp; {{ book.created_date }}</dd>
+    <dt>Last Update Date</dt>
     <dd>&nbsp;&nbsp; {{ book.updated_date }}</dd>
 
     <div class="row">
