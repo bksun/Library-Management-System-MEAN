@@ -11,6 +11,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class BookComponent implements OnInit {
 
   books: any;
+  priceClicked: boolean = false;
 
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
@@ -21,7 +22,19 @@ export class BookComponent implements OnInit {
     });
   }
 
- //this.router.navigate(['/books']);
+  sortByPrice(){ // clicking on Price header will sort the list by price
+    this.priceClicked = !this.priceClicked;
+    var sortAsc = (n1 , n2) =>  {console.log(n1); return n1.price - n2.price; }
+    var sortDesc = (n1 , n2) =>  {console.log(n1); return n2.price - n1.price; }
+
+    if(this.priceClicked){
+      this.books.sort(sortAsc);
+    }
+    else{
+      this.books.sort(sortDesc);  
+    }
+    console.log('SORTED');
+  }
         
   deleteBook(id) {
     if(confirm('Are you sure to delete the selected book?')){
